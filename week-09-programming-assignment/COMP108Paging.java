@@ -65,7 +65,7 @@ class COMP108Paging {
 	static COMP108PagingOutput evictLRU(int[] cArray, int cSize, int[] rArray, int rSize) {
 		COMP108PagingOutput output = new COMP108PagingOutput();
 
-		int[] lru = new int[cSize];
+		int[] lru = cArray;
 
 		for (int i = 0; i < rSize; i++) {
 			int request = rArray[i];
@@ -94,7 +94,7 @@ class COMP108Paging {
 					else {
 						if (lru[j] == request) {
 							hit = true;
-							break;
+							continue;
 						}
 						newLru[j] = lru[j];
 					}
@@ -103,14 +103,17 @@ class COMP108Paging {
 				output.missCount++;
 				output.hitPattern += "m";
 
-				for (int j = 0; j < cSize - 1; j++) {
+				for (int j = 0; j < cSize; j++) {
 					if (cArray[j] == lru[0])
 						cArray[j] = request;
-					newLru[j] = lru[j + 1];
+					if (j != cSize - 1) {
+						newLru[j] = lru[j + 1];
+					}
 				}
 			}
 
-			newLru[cSize - 1] = request;
+			if (cSize != 0)
+				newLru[cSize - 1] = request;
 			lru = newLru;
 		}
 
