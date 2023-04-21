@@ -4,8 +4,8 @@
 //
 // NOTE: You are allowed to add additional methods if you need.
 //
-// Name:
-// Student ID:
+// Name: Tate Enticknap
+// Student ID: 201656531
 //
 // Time Complexity and explanation: You can use the following variables for easier reference.
 // n denotes the number of requests, p denotes the size of the cache

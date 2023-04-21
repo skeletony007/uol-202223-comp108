@@ -3,8 +3,8 @@
 // Updated 2023-02-25
 //
 // Note: You are allowed to add additional methods if you need.
-// Name:
-// Student ID:
+// Name: Tate Enticknap
+// Student ID: 201656531
 //
 // Time Complexity and explanation:
 // f denotes initial cabinet size
@@ -69,9 +69,6 @@ class COMP108Cab {
 			int request = rArray[i];
 			boolean hit = false;
 
-			// System.out.println(headToTail());
-			// System.out.println(request);
-
 			COMP108Node curr;
 
 			curr = head;
@@ -99,29 +96,17 @@ class COMP108Cab {
 					prevNode = prevNode.prev;
 				}
 
-				if (curr.next == null) {
-					curr.next.prev = curr.prev;
-				}
-				else if (prevNode == null) {
-					curr.prev.next = curr.next;
+				if (prevNode != curr.prev) {
+					COMP108Node nextNode = (prevNode == null) ? head : prevNode.next;
 
+					curr.prev.next = curr.next;
 					if (curr.next == null)
 						tail = curr.prev;
 					else
 						curr.next.prev = curr.prev;
 
-					insertHead(curr);
-				} else {
-					COMP108Node nextNode = prevNode.next;
-
-					prevNode.next = curr;
-					nextNode.prev = curr;
-					curr.prev.next = curr.next;
-
-					if (curr.next == null)
-						tail = curr.prev;
-					else
-						curr.next.prev = curr.prev;
+					curr.prev = prevNode;
+					curr.next = nextNode;
 				}
 			}
 
