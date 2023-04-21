@@ -69,6 +69,9 @@ class COMP108Cab {
 			int request = rArray[i];
 			boolean hit = false;
 
+			// System.out.println(headToTail());
+			// System.out.println(request);
+
 			COMP108Node curr;
 
 			curr = head;
@@ -87,34 +90,39 @@ class COMP108Cab {
 				output.missCount++;
 				continue;
 			}
-
 			curr.freq++;
-			COMP108Node prevNode = curr.prev;
-			COMP108Node nextNode = curr.next;
 
-			while (curr != head && curr.freq > prevNode.freq) {
-				// Update the next node's prev pointer to point to the previous node
-				if (nextNode != null)
-					nextNode.prev = prevNode;
+			if (curr != head) {
+				COMP108Node prevNode = curr.prev;
 
-				// Update the previous node's next pointer to point to the next node
-				prevNode.next = nextNode;
+				while (prevNode != null && curr.freq > prevNode.freq) {
+					prevNode = prevNode.prev;
+				}
 
-				// Update curr's next and prev pointers to swap it with the previous node
-				curr.prev = prevNode.prev;
-				curr.next = prevNode;
+				if (curr.next == null) {
+					curr.next.prev = curr.prev;
+				}
+				else if (prevNode == null) {
+					curr.prev.next = curr.next;
 
-				// Update the previous node's prev pointer to point to curr
-				prevNode.prev = curr;
+					if (curr.next == null)
+						tail = curr.prev;
+					else
+						curr.next.prev = curr.prev;
 
-				// Update the previous node's next pointer if it is not the first node in the list
-				if (curr.prev != null)
-					curr.prev.next = curr;
-				else
-					head = curr;
+					insertHead(curr);
+				} else {
+					COMP108Node nextNode = prevNode.next;
 
-				prevNode = curr.prev;
-				nextNode = curr.next;
+					prevNode.next = curr;
+					nextNode.prev = curr;
+					curr.prev.next = curr.next;
+
+					if (curr.next == null)
+						tail = curr.prev;
+					else
+						curr.next.prev = curr.prev;
+				}
 			}
 
 			output.hitCount++;
