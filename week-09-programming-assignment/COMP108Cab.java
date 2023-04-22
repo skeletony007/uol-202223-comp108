@@ -13,8 +13,42 @@
 // You can use any of the above notations or define additional notation as you wish.
 //
 // appendIfMiss():
+// Inner loop:         function: f          Big-O notation: O(f)
+// Outer loop:         function: n          Big-O notation: O(n)
+// Total(*):           function: fn         Big-O notation: O(fn)
+//
+// The inner loop iterates O(f) times
+// The outer loop iterates O(n) times
+// For each outer loop iteration, we need to iterate the inner loop
+// Hence the  total(*) time complexity is O(fn)
+//
+// (*)Also considering headToTail() and tailToHead():
+// Second outer loop:  function: d + f      Big-O notation: O(d + f)
+// Third outer loop:   function: d + f      Big-O notation: O(d + f)
+// Total:              function: fn+2(d+f)  Big-O notation O(fn)
+//
+// The total time complexity remains O(fn), since both headToTail(), and
+// tailToHead() are linear whereas total(*) is polynomial
 //
 // freqCount():
+// Fist inner loop:    function: d + f      Big-O notation: O(d + f)
+// Second inner loop:  function: d + f      Big-O notation: O(d + f)
+// Outer loop:         function: n          Big-O notation: O(n)
+// Total(*):           function: 2n(d + f)  Big-O notation: O(n(d + f))
+//
+// The first and second inner loop both iterate O(d + f) times
+// The outer loop iterates O(n) times
+// For each outer loop iteration, we need to iterate both the inner loops
+// Hence the total(*) time complexity is O(n(d + f))
+//
+// (*)Also considering headToTail(), tailToHead() and headToTailFreq():
+// Second outer loop:  function: d + f      Big-O notation: O(d + f)
+// Third outer loop:   function: d + f      Big-O notation: O(d + f)
+// Fourth outer loop:  function: d + f      Big-O notation: O(d + f)
+// Total:              function: (2n+3)(d+f)Big-O notation O(n(d + f))
+//
+// The total time complexity remains O(n(d + f)), since each of headToTail(),
+// tailToHead() and headToTailFreq() are linear whereas total(*) is polynomial
 //
 
 class COMP108Cab {

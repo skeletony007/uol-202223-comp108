@@ -12,8 +12,37 @@
 // n and p can be different and there is no assumption which one is larger
 //
 // noEvict():
+// Inner loop:         function: p          Big-O notation: O(p)
+// Outer loop:         function: n          Big-O notation: O(n)
+// Total(*):           function: np         Big-O notation: O(np)
+//
+// The inner loop iterates O(p) times
+// The outer loop iterates O(n) times
+// For each outer loop iteration, we need to iterate the inner loop
+// Hence the total(*) time complexity is O(np)
+//
+// (*)Also considering arrayToString():
+// Second outer loop:  function: p          Big-O notation: O(p)
+//
+// The total time complexity remains O(np), since arrayToString() is linear
+// whereas total(*) is polynomial
 //
 // evictLRU():
+// First inner loop:   function: p          Big-O notation: O(p)
+// Second inner loop:  function: p          Big-O notation: O(p)
+// Outer loop:         function: n          Big-O notation: O(n)
+// Total(*):           function: 2np        Big-O notation: O(np)
+//
+// The first and second inner loop both iterate O(p) times
+// The outer loop iterates O(n) times
+// For each outer loop iteration, we need to iterate both the inner loops
+// Hence the total(*) time complexity is O(np)
+//
+// (*)Also considering arrayToString():
+// Second outer loop:  function: p          Big-O notation: O(p)
+//
+// The total time complexity remains O(np), since arrayToString() is linear
+// whereas total(*) is polynomial
 //
 
 class COMP108Paging {
