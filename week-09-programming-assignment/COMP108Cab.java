@@ -41,8 +41,10 @@ class COMP108Cab {
 			while (curr != null && !hit) {
 				output.compare[i]++;
 
-				if (curr.data == request)
+				if (curr.data == request) {
 					hit = true;
+					break;
+				}
 				curr = curr.next;
 			}
 
@@ -76,8 +78,10 @@ class COMP108Cab {
 			while (curr != null && !hit) {
 				output.compare[i]++;
 
-				if (curr.data == request)
+				if (curr.data == request) {
 					hit = true;
+					break;
+				}
 				curr = curr.next;
 			}
 
@@ -87,6 +91,7 @@ class COMP108Cab {
 				output.missCount++;
 				continue;
 			}
+
 			curr.freq++;
 
 			if (curr != head) {
@@ -105,8 +110,14 @@ class COMP108Cab {
 					else
 						curr.next.prev = curr.prev;
 
+					if (prevNode == null)
+						head = curr;
+					else
+						prevNode.next = curr;
+
 					curr.prev = prevNode;
 					curr.next = nextNode;
+					nextNode.prev = curr;
 				}
 			}
 
