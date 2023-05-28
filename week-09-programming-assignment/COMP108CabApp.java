@@ -1,9 +1,3 @@
-//
-// Coded by Prudence Wong 2021-03-06
-// Updated 2023-02-25
-// Do not change this file
-// Changes in this file will NOT be graded
-//
 import java.util.*;
 import java.io.*;
 
@@ -133,7 +127,6 @@ class COMP108CabApp {
 	}
 
 
-	// Do NOT change this method!
 	// print array[0]..array[size-1]
 	static void printArray(int[] array, int size) {
 		for (int i=0; i<size; i++) {

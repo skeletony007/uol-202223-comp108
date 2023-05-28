@@ -1,6 +1,3 @@
-//
-// by Prudence Wong 2021-03-20
-//
 import java.util.*;
 import java.io.*;
 

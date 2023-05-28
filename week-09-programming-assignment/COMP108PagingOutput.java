@@ -1,9 +1,3 @@
-//
-// Coded by Prudence Wong 2021-12-30
-// Updated 2023-02-25
-// Do not change this file
-// Changes in this file will NOT be graded
-//
 // A class to store output
 class COMP108PagingOutput {
 	private static final int AllOutput = 0;

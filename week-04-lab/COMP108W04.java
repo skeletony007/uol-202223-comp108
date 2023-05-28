@@ -1,7 +1,3 @@
-//
-// Enter your name: Tate Enticknap
-// Enter your student ID: 201656531
-//
 import java.util.*;
 import java.io.*;
 
@@ -21,9 +17,8 @@ class COMP108W04 {
 
 	}
 
-	// fill in this method for Task 1
+	// Task 1
 	// output the sum from numberX to numberY
-	// Hint: refer to sumFromOne()
 	static void sumFromTo(int numberX, int numberY) {
 		int i;
 		int sum;
@@ -45,7 +40,7 @@ class COMP108W04 {
 			System.out.println(numberY + " is not a factor of " + numberX);
 	}
 
-	// fill in this method for Task 2
+	// Task 2
 	// finding all multiples of numberX that are factors of numberY
 	static void multipleFactor(int numberX, int numberY) {
 		int i;
@@ -60,12 +55,11 @@ class COMP108W04 {
 
 	}
 
-	// Aim: to output all common multiples of x and y up to 100
-	// Find the bug and fix it by altering ONE line of code
+	// Output all common multiples of x and y up to 100
 	static void bugOne(int numberX, int numberY) {
 		int i, bound;
 
-		i = numberY; // I changed this line from `i = 1;`
+		i = numberY;
 		bound = 100;
 		System.out.print("Common Multiples up to " + bound + ": ");
 		while (i <= bound) {

@@ -1,7 +1,3 @@
-//
-// Enter your name:
-// Enter your student ID:
-//
 class COMP108W05 {
 
 	// print the content of an array of size n

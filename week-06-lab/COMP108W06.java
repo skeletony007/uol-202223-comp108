@@ -1,7 +1,3 @@
-//
-// Enter your name: Tate Enticknap
-// Enter your student ID: 201656531
-//
 // Question (b.iv):
 //   What is the time complexity of `notExists()`?
 // Answer:

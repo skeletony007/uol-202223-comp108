@@ -1,11 +1,3 @@
-//
-// Coded by Prudence Wong 2021-03-06
-// Updated 2023-02-25
-//
-// Note: You are allowed to add additional methods if you need.
-// Name: Tate Enticknap
-// Student ID: 201656531
-//
 // Time Complexity and explanation:
 // f denotes initial cabinet size
 // n denotes the total number of requests
@@ -164,7 +156,6 @@ class COMP108Cab {
 		return output;
 	}
 
-	// DO NOT change this method
 	// insert newNode to head of list
 	public void insertHead(COMP108Node newNode) {
 
@@ -177,7 +168,6 @@ class COMP108Cab {
 		head = newNode;
 	}
 
-	// DO NOT change this method
 	// insert newNode to tail of list
 	public void insertTail(COMP108Node newNode) {
 
@@ -189,7 +179,6 @@ class COMP108Cab {
 		tail = newNode;
 	}
 
-	// DO NOT change this method
 	// delete the node at the head of the linked list
 	public COMP108Node deleteHead() {
 		COMP108Node curr;
@@ -205,15 +194,12 @@ class COMP108Cab {
 		return curr;
 	}
 
-	// DO NOT change this method
 	// empty the cabinet by repeatedly removing head from the list
 	public void emptyCab() {
 		while (head != null)
 			deleteHead();
 	}
 
-
-	// DO NOT change this method
 	// this will turn the list into a String from head to tail
 	// Only to be used for output, do not use it to manipulate the list
 	public String headToTail() {
@@ -229,7 +215,6 @@ class COMP108Cab {
 		return outString;
 	}
 
-	// DO NOT change this method
 	// this will turn the list into a String from tail to head
 	// Only to be used for output, do not use it to manipulate the list
 	public String tailToHead() {
@@ -245,7 +230,6 @@ class COMP108Cab {
 		return outString;
 	}
 
-	// DO NOT change this method
 	// this will turn the frequency of the list nodes into a String from head to tail
 	// Only to be used for output, do not use it to manipulate the list
 	public String headToTailFreq() {

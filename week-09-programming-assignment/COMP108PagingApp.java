@@ -1,7 +1,3 @@
-//
-// Coded by Prudence Wong 2021-12-29
-// Updated 2023-02-26
-//
 import java.util.*;
 import java.io.*;
 
@@ -20,7 +16,6 @@ class COMP108PagingApp {
 	private static Scanner keyboardInput = new Scanner (System.in);
 
 
-	// Do NOT change the main method!
 	// main program
 	public static void main(String[] args) throws Exception {
 		int requestSize=0, cacheSize=0;
@@ -129,14 +124,12 @@ class COMP108PagingApp {
 	}
 	
 	
-	// Do NOT change this method!
 	// set array[0]..array[size-1] to value
 	static void initArray(int[] array, int size, int value) {
 		for (int i=0; i<size; i++) 
 			array[i] = value;
 	}
 	
-	// Do NOT change this method!
 	// print array[0]..array[size-1]
 	static void printArray(int[] array, int size) {
 		for (int i=0; i<size; i++) {
@@ -147,7 +140,6 @@ class COMP108PagingApp {
 		System.out.println();
 	}
 	
-	// Do NOT change this method!
 	// copy numbers from array a1 to array a2, starting from a1[0] to a2[0], up to a1[size-1] to a2[size-1]
 	static void copyArray(int[] array1, int[] array2, int size) {
 		for (int i=0; i<size; i++) {

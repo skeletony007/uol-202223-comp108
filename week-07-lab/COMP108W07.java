@@ -1,8 +1,3 @@
-//
-// Enter your name:
-// Enter your student ID:
-//
-
 class COMP108W07 {
 
 	public Node head, tail;
@@ -14,8 +9,6 @@ class COMP108W07 {
 
 	// sequential search if key is in the list
 	// return true or false accordingly
-	// Do NOT change its signature
-	// You should implement a list traversal algorithm here
 	public boolean seqSearchList(int key) {
 		boolean found = false;
 		Node curr;
@@ -33,8 +26,6 @@ class COMP108W07 {
 
 	// sequential search to count how many times key appears is in the list
 	// return the count
-	// Do NOT change its signature
-	// You should implement a list traversal algorithm here
 	public int countList(int key) {
 		int count=0;
 		Node curr;
@@ -52,8 +43,6 @@ class COMP108W07 {
 
 	// finding the minimum number in the list
 	// return the minimum
-	// Do NOT change its signature
-	// You should implement a list traversal algorithm here
 	public int searchMin() {
 		int min=Integer.MAX_VALUE;
 		Node curr;
@@ -73,8 +62,6 @@ class COMP108W07 {
 
 	// finding the maximum number in the list
 	// return the maximum
-	// Do NOT change its signature
-	// You should implement a list traversal algorithm here
 	public int searchMax() {
 		int max=Integer.MIN_VALUE;
 		Node curr;
@@ -92,7 +79,6 @@ class COMP108W07 {
 		return max;
 	}
 
-	// DO NOT change this method
 	// insert newNode to the head of the list
 	public void insertHead(Node newNode) {
 		newNode.next = head;
@@ -104,7 +90,6 @@ class COMP108W07 {
 		head = newNode;
 	}
 
-	// DO NOT change this method
 	// insert newNode to the tail of the list
 	public void insertTail(Node newNode) {
 		newNode.next = null;
@@ -115,10 +100,8 @@ class COMP108W07 {
 		tail = newNode;
 	}
 
-	// DO NOT change this method
 	// this will turn the list into a String from head to tail
 	// This is only here to ease outputing the list content.
-	// You should not use it in your list traversal.
 	public String headToTail() {
 		Node curr;
 		String outString="";
@@ -132,10 +115,8 @@ class COMP108W07 {
 		return outString;
 	}
 
-	// DO NOT change this method
 	// this will turn the list into a String from tail to head
 	// This is only here to ease outputing the list content.
-	// You should not use it in your list traversal.
 	public String tailToHead() {
 		Node curr;
 		String outString="";

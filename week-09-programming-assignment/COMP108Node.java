@@ -1,9 +1,3 @@
-//
-// Coded by Prudence Wong 2021-03-06
-// Updated 2023-02-25
-// Do not change this file
-// Changes in this file will NOT be graded
-//
 class COMP108Node {
 	public int data; 
 	public COMP108Node next;

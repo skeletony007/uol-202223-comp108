@@ -1,12 +1,3 @@
-//
-// Coded by Prudence Wong 2021-12-29
-// Updated 2023-02-25
-//
-// NOTE: You are allowed to add additional methods if you need.
-//
-// Name: Tate Enticknap
-// Student ID: 201656531
-//
 // Time Complexity and explanation: You can use the following variables for easier reference.
 // n denotes the number of requests, p denotes the size of the cache
 // n and p can be different and there is no assumption which one is larger
@@ -150,7 +141,6 @@ class COMP108Paging {
 		return output;
 	}
 
-	// DO NOT change this method
 	// this will turn the cache into a String
 	// Only to be used for output, do not use it to manipulate the cache
 	static String arrayToString(int[] array, int size) {

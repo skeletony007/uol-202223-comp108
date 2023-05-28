@@ -1,7 +1,3 @@
-//
-// by Prudence Wong 2021-03-08
-//
-
 class Node {
 	public int data; 
 	public Node next;

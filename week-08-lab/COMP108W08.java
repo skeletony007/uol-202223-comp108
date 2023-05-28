@@ -1,10 +1,3 @@
-//
-// by Prudence Wong 2021-03-20
-//
-// Name:
-// Student ID:
-//
-
 class COMP108W08 {
 
 	public Node head, tail;
@@ -76,7 +69,6 @@ class COMP108W08 {
 	}
 
 
-	// DO NOT change this method
 	// insert newNode to the head of the list
 	public void insertHead(Node newNode) {
 		newNode.next = head;
@@ -88,7 +80,6 @@ class COMP108W08 {
 		head = newNode;
 	}
 
-	// DO NOT change this method
 	// insert newNode to the tail of the list
 	public void insertTail(Node newNode) {
 		newNode.next = null;
@@ -99,7 +90,6 @@ class COMP108W08 {
 		tail = newNode;
 	}
 
-	// DO NOT change this method
 	// this will turn the list into a String from head to tail
 	public String headToTail(){
 		Node curr;
@@ -114,7 +104,6 @@ class COMP108W08 {
 		return outString;
 	}
 
-	// DO NOT change this method
 	// this will turn the list into a String from tail to head
 	public String tailToHead(){
 		Node curr;
